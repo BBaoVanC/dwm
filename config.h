@@ -62,6 +62,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
+static const char *uslayoutcmd[]  = { "setxkbmap", "-layout", "us", NULL };
+static const char *usintllayoutcmd[]  = { "setxkbmap", "-layout", "us", "-variant", "altgr-intl", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -104,6 +106,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
+	{ SUPER|MODKEY,                 XK_z,      spawn,          {.v = uslayoutcmd } },
+	{ SUPER|MODKEY,                 XK_x,      spawn,          {.v = usintllayoutcmd } },
 };
 
 /* button definitions */
