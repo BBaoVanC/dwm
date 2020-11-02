@@ -64,6 +64,7 @@ static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
 static const char *uslayoutcmd[]  = { "setxkbmap", "-layout", "us", NULL };
 static const char *usintllayoutcmd[]  = { "setxkbmap", "-layout", "us", "-variant", "altgr-intl", NULL };
+static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -108,6 +109,7 @@ static Key keys[] = {
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER|MODKEY,                 XK_z,      spawn,          {.v = uslayoutcmd } },
 	{ SUPER|MODKEY,                 XK_x,      spawn,          {.v = usintllayoutcmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 };
 
 /* button definitions */
