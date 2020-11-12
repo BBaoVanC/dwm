@@ -1,13 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 5;	/* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono:style=Bold:size=10" };
-static const char dmenufont[]       = "JetBrains Mono:style=Bold:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Bold:size=10" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Bold:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -68,9 +70,11 @@ static const char *uslayoutcmd[]  = { "setxkbmap", "-layout", "us", NULL };
 static const char *usintllayoutcmd[]  = { "setxkbmap", "-layout", "us", "-variant", "altgr-intl", NULL };
 static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
-//static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
-//static const char *raisevolcmd[]  = { "audioctl", "up", NULL };
-//static const char *lowervolcmd[]  = { "audioctl", "down", NULL };
+static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
+
+static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
+static const char *raisevolcmd[]  = { "audioctl", "up", NULL };
+static const char *lowervolcmd[]  = { "audioctl", "down", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -118,9 +122,10 @@ static Key keys[] = {
 	{ SUPER|MODKEY,                 XK_x,      spawn,          {.v = usintllayoutcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = printscrcmd } },
-	//{ 0,              XK_XF86AudioMute,        spawn,          {.v = mutecmd } },
-	//{ 0,              XK_XF86AudioRaiseVolume, spawn,          {.v = raisevolcmd } },
-	//{ 0,              XK_XF86AudioLowerVolume, spawn,          {.v = lowervolcmd } },
+	{ ShiftMask,                    XK_Print,  spawn,          {.v = printscrshiftcmd } },
+	{ 0,              XF86XK_AudioMute,        spawn,          {.v = mutecmd } },
+	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = raisevolcmd } },
+	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = lowervolcmd } },
 };
 
 /* button definitions */
