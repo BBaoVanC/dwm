@@ -66,8 +66,6 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
 static const char *imupccmd[]  = { "imupc", NULL };
-static const char *uslayoutcmd[]  = { "setxkbmap", "-layout", "us", NULL };
-static const char *usintllayoutcmd[]  = { "setxkbmap", "-layout", "us", "-variant", "altgr-intl", NULL };
 static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
 static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
@@ -118,8 +116,8 @@ static Key keys[] = {
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_u,      spawn,          {.v = imupccmd } },
-	{ SUPER|MODKEY,                 XK_z,      spawn,          {.v = uslayoutcmd } },
-	{ SUPER|MODKEY,                 XK_x,      spawn,          {.v = usintllayoutcmd } },
+	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && kill -39 $(pidof goblocks)") },
+	{ SUPER|MODKEY,                 XK_x,      spawn,          SHCMD("setxkbmap -layout us -variant altgr-intl && kill -39 $(pidof goblocks)") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = printscrcmd } },
 	{ ShiftMask,                    XK_Print,  spawn,          {.v = printscrshiftcmd } },
