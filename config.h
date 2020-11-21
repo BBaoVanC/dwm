@@ -38,6 +38,8 @@ static const Rule rules[] = {
 	{ "Firefox",		NULL,		NULL,		1 << 8,    0,          0,          -1,        -1 },
 	{ "st",			NULL,		NULL,		0,         0,          1,           0,        -1 },
 	{ "Thunderbird",	"Msgcompose", 	NULL,		0,         1,          0,           0,        -1 },
+	{ "Steam",		"Steam", 	"Steam - News",	0,         1,          0,           0,        -1 },
+	{ "Steam",		"Steam", 	"Friends List",	0,         1,          0,           0,        -1 },
 	{ "Dragon-drag-and-drop",NULL,		NULL,		0,         1,          0,           1,        -1 },
 	{ NULL,			NULL,		"Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
