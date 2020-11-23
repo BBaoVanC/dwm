@@ -74,6 +74,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
+static const char *muttcmd[]  = { "st", "-e", "neomutt", NULL };
 static const char *imupccmd[]  = { "imupc", NULL };
 static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
@@ -125,6 +126,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
+	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
 	{ SUPER,                        XK_u,      spawn,          {.v = imupccmd } },
 	{ SUPER|ShiftMask,              XK_u,      spawn,          {.v = imuppcmd } },
 	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && kill -39 $(pidof goblocks)") },
