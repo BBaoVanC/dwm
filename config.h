@@ -74,11 +74,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
 static const char *muttcmd[]  = { "st", "-e", "neomutt", NULL };
-static const char *imupccmd[]  = { "imupc", NULL };
+static const char *imupdragcmd[]  = { "imupdrag", NULL };
+static const char *imupclipcmd[] = { "imupclip", NULL };
 static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
 static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
-static const char *imuppcmd[] = { "imupp", NULL };
 static const char *powermenucmd[] = { "powermenu", NULL };
 
 static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
@@ -128,8 +128,8 @@ static Key keys[] = {
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
-	{ SUPER,                        XK_u,      spawn,          {.v = imupccmd } },
-	{ SUPER|ShiftMask,              XK_u,      spawn,          {.v = imuppcmd } },
+	{ SUPER,                        XK_u,      spawn,          {.v = imupdragcmd } },
+	{ SUPER|ShiftMask,              XK_u,      spawn,          {.v = imupclipcmd } },
 	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && kill -39 $(pidof goblocks)") },
 	{ SUPER|MODKEY,                 XK_x,      spawn,          SHCMD("setxkbmap -layout us -variant altgr-intl && kill -39 $(pidof goblocks)") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
