@@ -79,6 +79,7 @@ static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
 static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
 static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
 static const char *imuppcmd[] = { "imupp", NULL };
+static const char *powermenucmd[] = { "powermenu", NULL };
 
 static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
 static const char *raisevolcmd[]  = { "audioctl", "up", NULL };
@@ -123,6 +124,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
