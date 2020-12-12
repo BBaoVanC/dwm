@@ -81,6 +81,11 @@ static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
 static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
 static const char *powermenucmd[] = { "powermenu", NULL };
 
+static const char *dunstclose[] = { "dunstctl", "close", NULL };
+static const char *dunstcloseall[] = { "dunstctl", "close-all", NULL };
+static const char *dunsthistory[] = { "dunstctl", "history-pop", NULL };
+static const char *dunstcontext[] = { "dunstctl", "context", NULL };
+
 static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
 static const char *raisevolcmd[]  = { "audioctl", "up", NULL };
 static const char *lowervolcmd[]  = { "audioctl", "down", NULL };
@@ -133,6 +138,12 @@ static Key keys[] = {
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
+
+        // dunst keys
+        { SUPER,                        XK_Escape, spawn,          {.v = dunstclose } },
+        { SUPER|ShiftMask,              XK_Escape, spawn,          {.v = dunstcloseall } },
+        { SUPER,                        XK_grave,  spawn,          {.v = dunsthistory } },
+        { SUPER|ShiftMask,              XK_period, spawn,          {.v = dunstcontext } },
 
         // upload keys
 	{ SUPER,                        XK_u,      spawn,          {.v = imupdragcmd } },
