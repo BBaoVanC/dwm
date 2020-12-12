@@ -71,21 +71,31 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+
+// miscellaneous commands
+static const char *powermenucmd[] = { "powermenu", NULL };
+static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
+
+// program commands
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
 static const char *muttcmd[]  = { "st", "-e", "neomutt", NULL };
-static const char *imupdragcmd[]  = { "imupdrag", NULL };
-static const char *imupclipcmd[] = { "imupclip", NULL };
-static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
-static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
-static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
-static const char *powermenucmd[] = { "powermenu", NULL };
 
+// dunst commands
 static const char *dunstclose[] = { "dunstctl", "close", NULL };
 static const char *dunstcloseall[] = { "dunstctl", "close-all", NULL };
 static const char *dunsthistory[] = { "dunstctl", "history-pop", NULL };
 static const char *dunstcontext[] = { "dunstctl", "context", NULL };
 
+// upload keys
+static const char *imupdragcmd[]  = { "imupdrag", NULL };
+static const char *imupclipcmd[] = { "imupclip", NULL };
+
+// screenshot commands
+static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
+static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
+
+// volume commands
 static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
 static const char *raisevolcmd[]  = { "audioctl", "up", NULL };
 static const char *lowervolcmd[]  = { "audioctl", "down", NULL };
