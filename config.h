@@ -76,6 +76,7 @@ static const char *termcmd[]  = { "st", NULL };
 // miscellaneous commands
 static const char *powermenucmd[] = { "powermenu", NULL };
 static const char *lockcmd[]  = { "light-locker-command", "-l", NULL };
+static const char *clipeditcmd[] = { "clipedit", NULL };
 
 // program commands
 static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
@@ -144,6 +145,9 @@ static Key keys[] = {
 	/*                               CUSTOM KEYBINDS                               */
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
+
+	// miscellaneous
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = clipeditcmd } },
 
 	// program keys
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
