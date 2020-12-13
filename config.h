@@ -140,34 +140,34 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 
-        /*                               CUSTOM KEYBINDS                               */
+	/*                               CUSTOM KEYBINDS                               */
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = powermenucmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 
-        // program keys
+	// program keys
 	{ SUPER,                        XK_f,      spawn,          {.v = firefoxcmd } },
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
 
-        // dunst keys
-        { SUPER,                        XK_Escape, spawn,          {.v = dunstclose } },
-        { SUPER|ShiftMask,              XK_Escape, spawn,          {.v = dunstcloseall } },
-        { SUPER,                        XK_grave,  spawn,          {.v = dunsthistory } },
-        { SUPER|ShiftMask,              XK_period, spawn,          {.v = dunstcontext } },
+	// dunst keys
+	{ SUPER,                        XK_Escape, spawn,          {.v = dunstclose } },
+	{ SUPER|ShiftMask,              XK_Escape, spawn,          {.v = dunstcloseall } },
+	{ SUPER,                        XK_grave,  spawn,          {.v = dunsthistory } },
+	{ SUPER|ShiftMask,              XK_period, spawn,          {.v = dunstcontext } },
 
-        // upload keys
+	// upload keys
 	{ SUPER,                        XK_u,      spawn,          {.v = imupdragcmd } },
 	{ SUPER|ShiftMask,              XK_u,      spawn,          {.v = imupclipcmd } },
 
-        // keyboard layout keys
+	// keyboard layout keys
 	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && kill -39 $(pidof goblocks)") },
 	{ SUPER|MODKEY,                 XK_x,      spawn,          SHCMD("setxkbmap -layout us -variant altgr-intl && kill -39 $(pidof goblocks)") },
 
-        // screenshot keys
+	// screenshot keys
 	{ 0,                            XK_Print,  spawn,          {.v = printscrcmd } },
 	{ ShiftMask,                    XK_Print,  spawn,          {.v = printscrshiftcmd } },
 
-        // volume keys
+	// volume keys
 	{ 0,              XF86XK_AudioMute,        spawn,          {.v = mutecmd } },
 	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = raisevolcmd } },
 	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = lowervolcmd } },
