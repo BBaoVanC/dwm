@@ -83,6 +83,7 @@ static const char *firefoxcmd[]  = { "firefox-nightly", NULL };
 static const char *discordcanarycmd[]  = { "discord-canary", NULL };
 static const char *muttcmd[]  = { "st", "-e", "neomutt", NULL };
 static const char *rangercmd[]  = { "st", "-e", "ranger", NULL };
+static const char *passmenucmd[]  = { "passmenu", NULL };
 
 // dunst commands
 static const char *dunstclose[] = { "dunstctl", "close", NULL };
@@ -155,6 +156,7 @@ static Key keys[] = {
 	{ SUPER,                        XK_d,      spawn,          {.v = discordcanarycmd } },
 	{ SUPER,                        XK_m,      spawn,          {.v = muttcmd } },
 	{ SUPER,                        XK_r,      spawn,          {.v = rangercmd } },
+	{ SUPER,                        XK_p,      spawn,          {.v = passmenucmd } },
 
 	// dunst keys
 	{ SUPER,                        XK_Escape, spawn,          {.v = dunstclose } },
