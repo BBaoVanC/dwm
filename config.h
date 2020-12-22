@@ -196,8 +196,8 @@ static Key keys[] = {
 	{ SUPER|ShiftMask,              XK_u,      spawn,          {.v = imupclipcmd } },
 
 	// keyboard layout keys
-	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && kill -39 $(pidof goblocks)") },
-	{ SUPER|MODKEY,                 XK_x,      spawn,          SHCMD("setxkbmap -layout us -variant altgr-intl && kill -39 $(pidof goblocks)") },
+	{ SUPER|MODKEY,                 XK_z,      spawn,          SHCMD("setxkbmap -layout us && sigdwmblocks 2") },
+	{ SUPER|MODKEY,                 XK_x,      spawn,          SHCMD("setxkbmap -layout us -variant altgr-intl && sigdwmblocks 2") },
 
 	// screenshot keys
 	{ 0,                            XK_Print,  spawn,          {.v = printscrcmd } },
