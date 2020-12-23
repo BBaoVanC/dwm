@@ -9,6 +9,7 @@
     - [Patches](#patches)
     - [Features and Tweaks](#features-and-tweaks)
     - [Window Rules](#window-rules)
+  - [Installation](#installation)
 
 ## Dependencies
 
@@ -50,3 +51,10 @@
 - Dragon-drag-and-drop: make floating and don't swallow
 - Clipboard Editor (from dotfiles): make floating
 - Event Tester (xev): don't swallow
+
+## Installation
+
+1. Run `make`
+2. Run `sudo make install`
+
+By default, `dwm` will be installed to `/usr/local/bin` and manpages to `/usr/local/share/man/man1`
