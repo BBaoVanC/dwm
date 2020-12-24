@@ -33,20 +33,20 @@ static const char col11[]           = "#eceff4";
 static const char col12[]           = "#d8dee9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm]  = { col_gray3, col_gray1, col_gray1 },
-	[SchemeCol1]  = { col1,      col_gray1, col_gray2 },
-	[SchemeCol2]  = { col2,      col_gray1, col_gray2 },
-	[SchemeCol3]  = { col3,      col_gray1, col_gray2 },
-	[SchemeCol4]  = { col4,      col_gray1, col_gray2 },
-	[SchemeCol5]  = { col5,      col_gray1, col_gray2 },
-	[SchemeCol6]  = { col6,      col_gray1, col_gray2 },
-	[SchemeCol7]  = { col7,      col_gray1, col_gray2 },
-	[SchemeCol8]  = { col8,      col_gray1, col_gray2 },
-	[SchemeCol9]  = { col9,      col_gray1, col_gray2 },
-	[SchemeCol10] = { col10,     col_gray1, col_gray2 },
-	[SchemeCol11] = { col11,     col_gray1, col_gray2 },
-	[SchemeCol12] = { col12,     col_gray1, col_gray2 },
-	[SchemeSel]   = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm]  = { col_gray3, col_gray1, col_gray1 }, // x0b
+	[SchemeCol1]  = { col1,      col_gray1, col_gray2 }, // x0c
+	[SchemeCol2]  = { col2,      col_gray1, col_gray2 }, // x0d
+	[SchemeCol3]  = { col3,      col_gray1, col_gray2 }, // x0e
+	[SchemeCol4]  = { col4,      col_gray1, col_gray2 }, // x0f
+	[SchemeCol5]  = { col5,      col_gray1, col_gray2 }, // x10
+	[SchemeCol6]  = { col6,      col_gray1, col_gray2 }, // x11
+	[SchemeCol7]  = { col7,      col_gray1, col_gray2 }, // x12
+	[SchemeCol8]  = { col8,      col_gray1, col_gray2 }, // x13
+	[SchemeCol9]  = { col9,      col_gray1, col_gray2 }, // x14
+	[SchemeCol10] = { col10,     col_gray1, col_gray2 }, // x15
+	[SchemeCol11] = { col11,     col_gray1, col_gray2 }, // x16
+	[SchemeCol12] = { col12,     col_gray1, col_gray2 }, // x17
+	[SchemeSel]   = { col_gray4, col_cyan,  col_cyan  }, // x18
 };
 
 /* tagging */
