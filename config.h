@@ -33,20 +33,20 @@ static const char col11[]           = "#eceff4";
 static const char col12[]           = "#d8dee9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm]  = { col_gray3, col_gray1, col_gray1 }, // x0b
-	[SchemeCol1]  = { col1,      col_gray1, col_gray2 }, // x0c
-	[SchemeCol2]  = { col2,      col_gray1, col_gray2 }, // x0d
-	[SchemeCol3]  = { col3,      col_gray1, col_gray2 }, // x0e
-	[SchemeCol4]  = { col4,      col_gray1, col_gray2 }, // x0f
-	[SchemeCol5]  = { col5,      col_gray1, col_gray2 }, // x10
-	[SchemeCol6]  = { col6,      col_gray1, col_gray2 }, // x11
-	[SchemeCol7]  = { col7,      col_gray1, col_gray2 }, // x12
-	[SchemeCol8]  = { col8,      col_gray1, col_gray2 }, // x13
-	[SchemeCol9]  = { col9,      col_gray1, col_gray2 }, // x14
-	[SchemeCol10] = { col10,     col_gray1, col_gray2 }, // x15
-	[SchemeCol11] = { col11,     col_gray1, col_gray2 }, // x16
-	[SchemeCol12] = { col12,     col_gray1, col_gray2 }, // x17
-	[SchemeSel]   = { col_gray4, col_cyan,  col_cyan  }, // x18
+	[SchemeNorm]  = { col_gray3, col_gray1, col_gray1 }, // x0b #d8dee9 #2e3440
+	[SchemeCol1]  = { col1,      col_gray1, col_gray2 }, // x0c #3b4252 #2e3440
+	[SchemeCol2]  = { col2,      col_gray1, col_gray2 }, // x0d #bf616a #2e3440
+	[SchemeCol3]  = { col3,      col_gray1, col_gray2 }, // x0e #a3be8c #2e3440
+	[SchemeCol4]  = { col4,      col_gray1, col_gray2 }, // x0f #ebcb8b #2e3440
+	[SchemeCol5]  = { col5,      col_gray1, col_gray2 }, // x10 #81a1c1 #2e3440
+	[SchemeCol6]  = { col6,      col_gray1, col_gray2 }, // x11 #b48ead #2e3440
+	[SchemeCol7]  = { col7,      col_gray1, col_gray2 }, // x12 #88c0d0 #2e3440
+	[SchemeCol8]  = { col8,      col_gray1, col_gray2 }, // x13 #e5e9f0 #2e3440
+	[SchemeCol9]  = { col9,      col_gray1, col_gray2 }, // x14 #4c566a #2e3440
+	[SchemeCol10] = { col10,     col_gray1, col_gray2 }, // x15 #8fbcbb #2e3440
+	[SchemeCol11] = { col11,     col_gray1, col_gray2 }, // x16 #eceff4 #2e3440
+	[SchemeCol12] = { col12,     col_gray1, col_gray2 }, // x17 #d8dee9 #2e3440
+	[SchemeSel]   = { col_gray4, col_cyan,  col_cyan  }, // x18 #81a1c1
 };
 
 /* tagging */
