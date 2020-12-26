@@ -121,8 +121,9 @@ static const char *imupdragcmd[]  = { "imupdrag", NULL };
 static const char *imupclipcmd[] = { "imupclip", NULL };
 
 // screenshot commands
-static const char *printscrcmd[]  = { "flameshot", "gui", NULL };
-static const char *printscrshiftcmd[]  = { "flameshot", "screen", "-c", NULL };
+static const char *printscrcmd[]  = { "ssclip", "select", NULL };
+static const char *printscrshiftcmd[]  = { "ssclip", "screen", NULL };
+static const char *printscrctrlcmd[]  = { "ssclip", "window", NULL };
 
 // volume commands
 static const char *mutecmd[]  = { "audioctl", "toggle", NULL };
@@ -200,6 +201,7 @@ static Key keys[] = {
 	// screenshot keys
 	{ 0,                            XK_Print,  spawn,          {.v = printscrcmd } },
 	{ ShiftMask,                    XK_Print,  spawn,          {.v = printscrshiftcmd } },
+	{ ControlMask,                  XK_Print,  spawn,          {.v = printscrctrlcmd } },
 
 	// volume keys
 	{ 0,              XF86XK_AudioMute,        spawn,          {.v = mutecmd } },
