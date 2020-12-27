@@ -43,8 +43,11 @@ Please see `imupdrag` and `imupclip` scripts in my dotfiles.
 
 ## Screenshot
 
-- `PrintScreen`: open Flameshot GUI
-- `Shift+PrintScreen`: capture current monitor using Flameshot
+**NOTE: These screenshot keybinds require you to have the `ssclip` script from my dotfiles. The script is a wrapper for `maim`.**
+
+- `PrintScreen`: capture a rectangular screenshot to clipboard
+- `Shift+PrintScreen`: capture all screens to clipboard
+- `Ctrl+PrintScreen`: capture active window to clipboard
 
 ## Volume
 
